@@ -1,6 +1,6 @@
-
-<input type="radio" name="usertype" (click)="toggelusertype('R') ">regiter
-<input type="radio" name="usertype" (click)="toggelusertype('S')">SIGN  IN
+<div class="style">
+<button name="usertype" (click)="toggelusertype('R') ">regiter</button>
+<button name="usertype" (click)="toggelusertype('S')">SIGN  IN</button>
 
 
 <div *ngIf="usertype == 'regiter'">
@@ -65,3 +65,4 @@
             <h2>Login</h2>
         </div>
     </div>
+</div>
