@@ -1,0 +1,39 @@
+<label>Rollno</label><input type="text"><br><br>
+<label>Name</label><input type="text"><br><br>
+<label>Class</label><input type="text"><br><br>
+<label>Age</label><input type="text"><br><br>
+<label>contact</label><input type="text"><br><br>
+
+<button>Add stundent</button>
+
+<h2>people list</h2>
+<ul>
+    <li *ngFor="let p of peoplelist" [ngStyle]="{'color':getcolor(p.country)}">
+       {{p.name}}
+       {{p.country | uppercase}}
+    </li>
+</ul>
+<h2>ng class</h2>
+<ul>
+    <li *ngFor="let p of peoplelist" [ngClass]="{'cntry':p.country == 'usa'}">
+       {{p.name}}
+       {{p.country | lowercase}}
+    </li>
+</ul>
+
+<h3>angular pipes</h3>
+<span>today's date: {{todayDt}}</span><br/>
+ <span>full date :{{todayDt}}</span><br/>
+<span>short date :{{todayDt | date:'shortDate'}}</span><br/>
+<span>medium date: {{todayDt | date:'mediumDate'}}</span><br/>
+<span>full date :{{todayDt | date:'fullDate'}}</span><br/>
+<span>time:{{todayDt | date:'HH:MM'}}</span><br/>
+<span>time :{{todayDt | date:'hh:mm:ss a'}}</span><br/> 
+
+
+
+<p>{{jaonVal | json}}</p>
+<p>{{months | slice:4:7}}</p>
+<p>{{amount | number:'2.2'}}</p>
+<p>{{marks | percent:'2.1'}}</p> 
+

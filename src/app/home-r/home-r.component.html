@@ -1,0 +1,67 @@
+
+<input type="radio" name="usertype" (click)="toggelusertype('R') ">regiter
+<input type="radio" name="usertype" (click)="toggelusertype('S')">SIGN  IN
+
+
+<div *ngIf="usertype == 'regiter'">
+    <h1>Form regiter</h1>
+
+<div>
+    <label>NAME:</label><input type="text" id="fname" name="fname" placeholder="ENTER NAME">
+</div><br>
+<div>
+    <label>LAST NAME:</label> <input type="text" id="lname" name="lname" placeholder="ENTER NAME">
+</div><br>
+<div>
+    <label>DOB:</label> <input type="date">
+</div><br>
+<div>
+    <label>EMAIL:</label><input type="email" placeholder="ENTER THE MAIL">
+</div> <br>
+<div>
+    <label>HOBBIES:</label><input type="checkbox" value="reading">read
+    <input type="checkbox" checked value="playing">playing
+    <input type="checkbox" value="sports">sports
+</div><br>
+<div>
+    <label>GENDER:</label><input type="radio" value="male">male
+    <input type="radio" value="female">female
+</div><br>
+<div>
+    <label>PASSWORD</label><input type="password" placeholder="XXXXXXXXXXXXXXX">
+</div><br>
+<div>
+    <label>CITY</label>
+    <select name="city">
+        <option name=city value="chennai">chennai</option>
+        <option name=city value="trichy">trichy</option>
+        <option name=city value="thanjai">thanjai</option>
+        <option name=city value="mannargudi">mannargudi</option>
+    </select>
+
+</div>
+
+<div >
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+</div>
+</div>
+ 
+<div *ngIf="usertype == 'SIGN  IN'">
+<h1>SIGN  IN</h1>
+        <h2>f sign in  with Facebook</h2>
+        <h3>G  sign in  with  Google</h3>
+        <div>
+            <label>Username:</label><input type="text"  id="uname"  name="uname" placeholder="ENTER USERNAME">
+            </div><br>
+            <div>
+            <label>password:</label><input type="password"  id="hidden"  placeholder="ENTER  PASSWORD">
+            </div><br>
+            <div>
+            <label>Remember </label><input  type="checkbox"  id="Remember">
+        </div><br>
+        <b>Forget password?</b> 
+        <div>
+            <h2>Login</h2>
+        </div>
+    </div>

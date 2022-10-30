@@ -1,0 +1,49 @@
+<p>I AM MADHU</p>
+<h1>{{title}}</h1>
+<h2>{{madhu}}</h2>
+
+<button [disabled]="isDisabled" (click)="submitform()">submit</button>
+<img [src]="imgNm">
+<p>ngTf directives</p>
+
+<button (click)="student()"> show stundet data</button>
+<input type="radio" name="usertyp" (click)="toggleusertype('T')" checked>Teacher
+<input type="radio" name="usertyp" (click)="toggleusertype('S')">stundent
+<div *ngIf="userType == 'Teacher'">
+    <h3>student rollno:{{stundetdata.Rollno}}</h3>
+    <h3>student Name:{{stundetdata.Name}}</h3>
+</div>
+
+<div *ngIf="userType == 'stundent'">
+    <h3>student id:{{stundetdata.Rollno}}</h3>
+    <h3>student Name:{{stundetdata.Name}}</h3>
+    <h3>student section:{{stundetdata.Section}}</h3>
+    <h3>student class:{{stundetdata.Class}}</h3>
+    <h3>student age:{{stundetdata.Age}}</h3>
+    <h3>student cnt:{{stundetdata.cnt}}</h3>
+</div>
+
+<p>ngFor direatives</p>
+<ul>
+    <li *ngFor="let sub of subject;let in =index">
+        {{in+1}} {{sub}}
+    </li>
+</ul>
+
+<table>
+    <th>Roll no</th>
+    <th>Name</th>
+    <th>Class</th>
+    <th>Section</th>
+    <th>Age</th>
+    <th>contact</th>
+    <tr *ngFor="let stund of stundetlist">
+        <td>{{ stund.Rollno}}</td>
+        <td>{{ stund.Name</td>
+        <td>{{ stund.Class}}</td>
+        <td>{{ stund.Section}}</td>
+        <td>{{ stund.Age}}</td>
+        <td>{{ stund.cnt}}</td>
+    </tr>
+</table>
+
