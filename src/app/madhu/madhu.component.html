@@ -29,7 +29,7 @@
         {{in+1}} {{sub}}
     </li>
 </ul>
-
+<div class="btn">
 <table>
     <th>Roll no</th>
     <th>Name</th>
@@ -37,13 +37,14 @@
     <th>Section</th>
     <th>Age</th>
     <th>contact</th>
-    <tr *ngFor="let stund of stundetlist">
-        <td>{{ stund.Rollno}}</td>
-        <td>{{ stund.Name</td>
-        <td>{{ stund.Class}}</td>
-        <td>{{ stund.Section}}</td>
-        <td>{{ stund.Age}}</td>
-        <td>{{ stund.cnt}}</td>
+    <tr *ngFor="let stund of stundent">
+        <td>{{stund.Rollno}}</td>
+        <td>{{stund.Name}}</td>
+        <td>{{stund.Class}}</td>
+        <td>{{stund.Section}}</td>
+        <td>{{stund.Age}}</td>
+        <td>{{stund.cnt}}</td>
     </tr>
 </table>
+</div>
 

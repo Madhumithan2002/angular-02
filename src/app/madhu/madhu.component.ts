@@ -81,13 +81,30 @@ export class MadhuComponent implements OnInit {
       cnt: 826286846328,
     },
     {
-      Rollno: 101,
-      Name: 'arunk',
+      Rollno: 102,
+      Name: 'aravid',
       Class: '5th',
       Section: 'A',
       Age: 10,
       cnt: 826286846328,
-    }
+    },
+    {
+      Rollno: 103,
+      Name: 'ram',
+      Class: '5th',
+      Section: 'A',
+      Age: 10,
+      cnt: 826286846328,
+    },
+    {
+      Rollno: 104,
+      Name: 'yokesh',
+      Class: '5th',
+      Section: 'A',
+      Age: 10,
+      cnt: 826286846328,
+    },
+    
   ]
 
   public subject: String[] = ['arun', 'ram', 'yokesh', 'aravind']

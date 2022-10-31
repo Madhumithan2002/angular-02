@@ -27,6 +27,6 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MadhuComponent,AppComponent]
 })
 export class AppModule { }
