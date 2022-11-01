@@ -10,6 +10,7 @@ import { RoterComponent } from './roter/roter.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
+import { EmpdataComponent } from './empdata/empdata.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AddEmpComponent } from './add-emp/add-emp.component';
     PagenotfoundComponent,
     HeaderComponent,
     AddEmpComponent,
+    EmpdataComponent,
     
   ],
   imports: [
