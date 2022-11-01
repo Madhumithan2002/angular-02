@@ -9,6 +9,7 @@ import { HomeRComponent } from './home-r/home-r.component';
 import { RoterComponent } from './roter/roter.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
+import { AddEmpComponent } from './add-emp/add-emp.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
     RoterComponent,
     PagenotfoundComponent,
     HeaderComponent,
+    AddEmpComponent,
     
   ],
   imports: [
@@ -27,6 +29,6 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [MadhuComponent,AppComponent]
+  bootstrap: [HeaderComponent,HomeRComponent,FirstcomponentComponent,PagenotfoundComponent,RoterComponent]
 })
 export class AppModule { }
