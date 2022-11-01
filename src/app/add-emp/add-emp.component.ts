@@ -9,10 +9,5 @@ export class AddEmpComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  addempolyee(){
-    
-  }
+  ngOnInit(): void {}
 }
