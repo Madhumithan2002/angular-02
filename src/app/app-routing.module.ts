@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddEmpComponent } from './add-emp/add-emp.component';
 import { FirstcomponentComponent } from './firstcomponent/firstcomponent.component';
 import { HomeRComponent } from './home-r/home-r.component';
 import { MadhuComponent } from './madhu/madhu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { RoterComponent } from './roter/roter.component';
+
 
 const routes: Routes = [
 {path:'services',
@@ -15,6 +16,9 @@ const routes: Routes = [
 },
 {path:'tabel',
   component:MadhuComponent
+},
+ {path:'add-employee',
+   component:AddEmpComponent
 },
 {path:'',redirectTo:"services", pathMatch:'full'},
 {
