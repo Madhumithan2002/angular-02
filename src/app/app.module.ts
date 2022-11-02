@@ -11,10 +11,13 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { EmpdataComponent } from './empdata/empdata.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
 
 
 @NgModule({
   declarations: [
+
     AppComponent,
     MadhuComponent,
     FirstcomponentComponent,
@@ -22,15 +25,20 @@ import { EmpdataComponent } from './empdata/empdata.component';
     RoterComponent,
     PagenotfoundComponent,
     HeaderComponent,
-    AddEmpComponent,
     EmpdataComponent,
-    
+    AddEmpComponent,
+    AddEmpReactiveComponent
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
-  bootstrap: [HeaderComponent,HomeRComponent,FirstcomponentComponent,PagenotfoundComponent,RoterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

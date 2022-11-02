@@ -1,0 +1,32 @@
+<h1>ADD EMPLOYEEFORM REACTIVE</h1>
+
+<form [formGroup]="emp" (ngSubmit)="addEmp()" novalidate >
+    <div>
+        <label for="fullName" name="lbName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" formControlName="fullnm">
+    </div>
+    <div>
+        <label for="address" name="lbAddress">Address:</label>
+        <input type="text" name="address" id="address" formControlName="address" >
+    </div>
+    <div>
+        <label for="emailid" name="emailid">Email:</label>
+        <input type="text" name="emailid" id="address" formControlName="emailid" >
+    </div>
+    <div>
+        <label for="cnt" name="lbCnt">Contact:</label>
+        <input type="text" name="cnt" id="cnt" formControlName="cnt">
+    </div>
+    <div>
+        <label>city:</label>
+        <select name="cty" id="cty"  formControlName="city">
+            <option value="chn">chennai</option>
+            <option value="mar">mannargudi</option>
+            <option value="tnj">thanjai</option>
+            <option value="thy">trichy</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Addemployee</button>
+    </div>
+</form>

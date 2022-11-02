@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { FirstcomponentComponent } from './firstcomponent/firstcomponent.component';
 import { HomeRComponent } from './home-r/home-r.component';
@@ -19,6 +20,9 @@ const routes: Routes = [
 },
  {path:'add-employee',
    component:AddEmpComponent
+},
+{path:'addemployeereactive',
+   component:AddEmpReactiveComponent
 },
 {path:'',redirectTo:"services", pathMatch:'full'},
 {

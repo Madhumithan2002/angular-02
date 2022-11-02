@@ -11,8 +11,7 @@ export class HomeRComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   toggelusertype(usertype:string){
     if(usertype == 'R'){

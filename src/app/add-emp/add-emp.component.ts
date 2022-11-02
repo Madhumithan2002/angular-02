@@ -9,5 +9,11 @@ export class AddEmpComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+  empData(empForm:any){
+
+  console.log(empForm.value)
+  }
 }
