@@ -3,3 +3,11 @@
     color: red !important;
     text-decoration: underline;
 }
+
+.err{
+    color: red;
+}
+
+.errtxt{
+    border: 1px  solid red;
+}

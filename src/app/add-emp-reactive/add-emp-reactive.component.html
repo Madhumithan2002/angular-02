@@ -2,8 +2,11 @@
 
 <form [formGroup]="emp" (ngSubmit)="addEmp()" novalidate >
     <div>
-        <label for="fullName" name="lbName">Full Name:</label>
-        <input type="text" name="fullName" id="fullName" formControlName="fullnm">
+        <label for="fullName">Full Name:</label>
+         <input type="text" name="fullName" id="fullName" formControlName="fullName">
+    </div>
+    <div>
+        <span class="err">First Name is required and it should have minimum 10 charaters & max 15</span>
     </div>
     <div>
         <label for="address" name="lbAddress">Address:</label>
@@ -13,6 +16,9 @@
         <label for="emailid" name="emailid">Email:</label>
         <input type="text" name="emailid" id="address" formControlName="emailid" >
     </div>
+    <!-- <div>
+        <span *ngIf="!emp.controls.emailid.valid" class="err">Email is required </span>
+</div> -->
     <div>
         <label for="cnt" name="lbCnt">Contact:</label>
         <input type="text" name="cnt" id="cnt" formControlName="cnt">
@@ -27,6 +33,9 @@
         </select>
     </div>
     <div>
-        <button type="submit">Addemployee</button>
+        <button type="submit" [disabled]="!emp.valid">Addemployee</button>
+    </div>
+    <div>
+        <button type="button" (click)="Eidtemployee()" >Editemployee</button>
     </div>
 </form>

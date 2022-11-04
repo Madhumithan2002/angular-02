@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-emp-reactive',
@@ -11,11 +11,11 @@ export class AddEmpReactiveComponent implements OnInit {
   constructor() { }
 
   emp:FormGroup = new FormGroup({
-    fullnm:new FormControl(),
+    fullName:new FormControl("",[Validators.required,Validators.minLength(10)]),
     address:new FormControl(),
     cnt:new FormControl(),
-    city:new FormControl,
-    emailid:new FormControl,
+    city:new FormControl(),
+    emailid:new FormControl("",[Validators.email]),
 
   })
 
@@ -26,4 +26,19 @@ export class AddEmpReactiveComponent implements OnInit {
     console.log(this.emp.value)
   }
 
+  Eidtemployee(){
+    this.emp.setValue({
+      fullName:'arun',
+      address:'OMR chennai',
+      cnt:'98776434',
+      city:'chn',
+      emailid:'madhu@gmail.com'
+    })
+    this.emp.patchValue({
+      fullName:'madhumithan',
+      city:'chn',
+      cnt:'987652478',
+      emailid:'test@gmail.com'
+    });
+  }
 }
