@@ -13,6 +13,8 @@ import { AddEmpComponent } from './add-emp/add-emp.component';
 import { EmpdataComponent } from './empdata/empdata.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
+import { LoginComponent } from './login/login.component';
+import { UserAuthGuard } from './user-auth.guard';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.com
     HeaderComponent,
     EmpdataComponent,
     AddEmpComponent,
-    AddEmpReactiveComponent
+    AddEmpReactiveComponent,
+    LoginComponent
 
 
   ],
@@ -38,7 +41,7 @@ import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.com
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [UserAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,12 +15,12 @@ export class MadhuComponent implements OnInit {
   stu: boolean = true;
 
   isDisabled: boolean = false;
-  imgNm: string = "download.png"
+  imgNm: string = " "
   userType: string = 'Teacher'
 
   stundetdata: stundent = {
     Rollno: 101,
-    Name: 'arunk',
+    Name: 'venky',
     Class: '5th',
     Section: 'A',
     Age: 10,
@@ -121,6 +121,10 @@ export class MadhuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    let username = localStorage.getItem('username');
+
+    console.log(username);
   }
   student() {
     this.stu = true;

@@ -4,13 +4,16 @@ import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.com
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { FirstcomponentComponent } from './firstcomponent/firstcomponent.component';
 import { HomeRComponent } from './home-r/home-r.component';
+import { LoginComponent } from './login/login.component';
 import { MadhuComponent } from './madhu/madhu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserAuthGuard } from './user-auth.guard';
 
 
 const routes: Routes = [
 {path:'services',
-  component:HomeRComponent
+  component:HomeRComponent,
+  canActivate:[UserAuthGuard]
 },
 {path:'about/:sid',
   component:FirstcomponentComponent
@@ -24,7 +27,10 @@ const routes: Routes = [
 {path:'addemployeereactive',
    component:AddEmpReactiveComponent
 },
-{path:'',redirectTo:"services", pathMatch:'full'},
+{path:'Login',
+   component:LoginComponent
+},
+{path:'',redirectTo:"/services", pathMatch:'full'},
 {
   path:'**',
   component:PagenotfoundComponent
