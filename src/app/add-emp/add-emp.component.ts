@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EmployeeService} from '../employee.service';
 
 @Component({
   selector: 'app-add-emp',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEmpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private empsr:EmployeeService) { }
 
   ngOnInit(): void {
+    console.log(this.empsr.userId);
+    console.log(this.empsr.userNmae);
+    console.log(this.empsr.stundetlist);
 
   }
   empData(empForm:any){

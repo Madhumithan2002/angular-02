@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
 import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
+import { EmployeeService } from './employee.service';
 
 
 @NgModule({
@@ -38,10 +39,11 @@ import { UserAuthGuard } from './user-auth.guard';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
 
   ],
-  providers: [UserAuthGuard],
+  providers: [UserAuthGuard,EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

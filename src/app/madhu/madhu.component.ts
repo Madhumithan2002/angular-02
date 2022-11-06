@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 import { stundent } from '../model/studentmdl';
 import { stundentcls } from '../model/stundent';
 
@@ -27,49 +28,6 @@ export class MadhuComponent implements OnInit {
     cnt: 826286846328,
 
   }
-
-  public stundetlist: stundent[] = [
-    {
-      Rollno: 101,
-      Name: 'arunk',
-      Class: '5th',
-      Section: 'A',
-      Age: 10,
-      cnt: 826286846328,
-    },
-    {
-      Rollno: 102,
-      Name: 'aravind',
-      Class: '5th',
-      Section: 'A',
-      Age: 10,
-      cnt: 826286846328,
-    },
-    {
-      Rollno: 103,
-      Name: 'ram',
-      Class: '5th',
-      Section: 'A',
-      Age: 10,
-      cnt: 826286846328,
-    },
-    {
-      Rollno: 104,
-      Name: 'yokesh',
-      Class: '5th',
-      Section: 'A',
-      Age: 10,
-      cnt: 826286846328,
-    },
-    {
-      Rollno: 105,
-      Name: 'rajkumar',
-      Class: '5th',
-      Section: 'A',
-      Age: 10,
-      cnt: 826286846328,
-    }
-  ]
 
   public stundent: stundentcls[] = [
     {
@@ -118,9 +76,12 @@ export class MadhuComponent implements OnInit {
 
   }
 
-  constructor() { }
+  constructor(private epmsr:EmployeeService) { }
+  // stundetlist:stundent[];
 
   ngOnInit(): void {
+    this.epmsr.stundetlist;
+    console.log(this.epmsr.stundetlist);
 
     let username = localStorage.getItem('username');
 
