@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {gtrs20} from '../shared/customvalidation/employeevalidation'
-import {countryy} from '../model/countrylist'; '../model/country'
+import {countryy} from '../model/countrylist';import { Router } from '@angular/router';
+ '../model/country'
 
 @Component({
   selector: 'app-add-emp-reactive',
@@ -10,7 +11,7 @@ import {countryy} from '../model/countrylist'; '../model/country'
 })
 export class AddEmpReactiveComponent implements OnInit {
 
-  constructor() { }
+  constructor(private log:Router) { }
 
   countrylist: any = [{
       cntryCode:'ind',
@@ -32,17 +33,23 @@ export class AddEmpReactiveComponent implements OnInit {
    
 
 
-  emp:FormGroup = new FormGroup({
+  emp = new FormGroup({
     fullName:new FormControl("",[Validators.required,Validators.minLength(10)]),
     address:new FormControl(),
     cnt:new FormControl("",[gtrs20]),
     city:new FormControl(),
-    emailid:new FormControl("",[Validators.email]),
+    emailid:new FormControl("",[Validators.email,Validators.required]),
     country:new FormControl('',Validators.required)
 
   })
 
   ngOnInit(): void {
+    let username = localStorage.getItem('username');
+
+    console.log(username);
+    if(username == null || username == ''){
+      this.log.navigateByUrl('/Login')
+    }
   }
 
   addEmp(){

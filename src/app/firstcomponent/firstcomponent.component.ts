@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{stundentcls} from'../model/stundent';
 import{people} from'../model/people';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-firstcomponent',
   templateUrl: './firstcomponent.component.html',
@@ -33,9 +34,15 @@ months =["jan","feb","mar","april","may","jun","july","aug","sept","oct","nov","
 
 amount =350;
 marks =0.9876;
-  constructor() { }
+  constructor(private log:Router) { }
 
   ngOnInit(): void {
+    let username = localStorage.getItem('username');
+
+    console.log(username);
+    if(username == null || username == ''){
+      this.log.navigateByUrl('/Login')
+    }
   }
 
   // addstundent(): stundentcls{

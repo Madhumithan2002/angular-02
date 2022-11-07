@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginfrm:FormGroup = new FormGroup({
+  loginfrm = new FormGroup({
     username:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required]),
   })
@@ -21,15 +21,17 @@ export class LoginComponent implements OnInit {
   lgin(){
     console.log(this.loginfrm.value)
 
-    localStorage.setItem('username','madhumithan');
-    this.rotr.navigateByUrl('/tabel');
-  }
-    // if(this.loginfrm.controls.username.value !='madhumithan' || this.loginfrm.controls.password.value !='1234M'){
-    //   this.userinvalid =true
-    // }
-    // else{
-    //   this.userinvalid =false
-    // }
   
+    
+  
+     if(this.loginfrm.controls.username.value !='madhumithan' || this.loginfrm.controls.password.value !='1234M'){
+       this.userinvalid =true
+     }
+    else{
+       this.userinvalid =false;
+       localStorage.setItem('username',this.loginfrm.controls.username.value);
+        this.rotr.navigateByUrl('/tabel');
+    }
+  }
 
 }

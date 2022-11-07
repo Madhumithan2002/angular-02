@@ -2,3 +2,26 @@
     color: rgb(242, 122, 122) !important;
     text-decoration: underline;
 }
+
+.link li{
+    list-style-type: none;
+    font-size: medium;
+    float: left;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+    color: white;
+}
+
+.head{
+    width: 100%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    overflow: auto;
+     margin-bottom: 2%; 
+     background-color: blue;
+     
+}
+.link a {
+    text-decoration: none;
+    color: white;
+}

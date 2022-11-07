@@ -1,37 +1,38 @@
 <h1>ADD EMPLOYEEFORM REACTIVE</h1>
 
-<form [formGroup]="emp" (ngSubmit)="addEmp()" novalidate >
+<form [formGroup]="emp" (ngSubmit)="addEmp()" novalidate>
     <div>
         <label for="fullName">Full Name:</label>
-         <input type="text" name="fullName" id="fullName" formControlName="fullName">
+        <input type="text" name="FullName" id="FullName" formControlName="fullName"[ngClass]="{'errtxt' :(!emp.controls.fullName.valid)&&(emp.controls.fullName.dirty)}">
     </div>
     <div>
-        <span class="err">First Name is required and it should have minimum 10 charaters & max 15</span>
+        <span *ngIf="(!emp.controls.fullName?.valid)&&(emp.controls.fullName?.dirty)" class="err">First Name is required
+            and it should have minimum 10 charaters & max 15</span>
     </div>
     <div>
         <label for="address" name="lbAddress">Address:</label>
-        <input type="text" name="address" id="address" formControlName="address" >
+        <input type="text" name="address" id="address" formControlName="address">
     </div>
     <div>
         <label for="emailid" name="emailid">Email:</label>
-        <input type="text" name="emailid" id="address" formControlName="emailid" >
+        <input type="text" name="emailid" id="address" formControlName="emailid" [ngClass]="{'errtxt' :(!emp.controls.emailid.valid)&&(emp.controls.emailid.dirty)}">
     </div>
-    <!-- <div>
-        <span *ngIf="!emp.controls.emailid.valid" class="err">Email is required </span>
-</div> -->
+     <div>
+        <span *ngIf="(!emp.controls.emailid?.valid)&&(emp.controls.emailid?.dirty)" class="err">Email is required </span>
+</div> 
     <div>
         <label for="cnt" name="lbCnt">Contact:</label>
         <input type="text" name="cnt" id="cnt" formControlName="cnt">
     </div>
     <div>
         <label for="cntry">Country:</label>
-        <select name="cntry" id="cntrySel" formControlName="country" (change)="countryVal()" >
-        <option *ngFor="let c of  countrylist" [value]="c.cntryCode">{{c.cntryVale}}</option>
-    </select>
+        <select name="cntry" id="cntrySel" formControlName="country" (change)="countryVal()">
+            <option *ngFor="let c of  countrylist" [value]="c.cntryCode">{{c.cntryVale}}</option>
+        </select>
     </div>
     <div>
         <label>city:</label>
-        <select name="cty" id="cty"  formControlName="city">
+        <select name="cty" id="cty" formControlName="city">
             <option value="chn">chennai</option>
             <option value="mar">mannargudi</option>
             <option value="tnj">thanjai</option>
@@ -42,6 +43,6 @@
         <button type="submit" [disabled]="!emp.valid">Addemployee</button>
     </div>
     <div>
-        <button type="button" (click)="Eidtemployee()" >Editemployee</button>
+        <button type="button" (click)="Eidtemployee()">Editemployee</button>
     </div>
 </form>

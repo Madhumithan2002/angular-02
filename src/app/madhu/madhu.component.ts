@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 import { stundent } from '../model/studentmdl';
 import { stundentcls } from '../model/stundent';
@@ -76,16 +77,19 @@ export class MadhuComponent implements OnInit {
 
   }
 
-  constructor(private epmsr:EmployeeService) { }
+  constructor(private log:Router) { }
   // stundetlist:stundent[];
 
   ngOnInit(): void {
-    this.epmsr.stundetlist;
-    console.log(this.epmsr.stundetlist);
+    // this.epmsr.stundetlist;
+    // console.log(this.epmsr.stundetlist);
 
     let username = localStorage.getItem('username');
 
     console.log(username);
+    if(username == null || username == ''){
+      this.log.navigateByUrl('/Login')
+    }
   }
   student() {
     this.stu = true;
