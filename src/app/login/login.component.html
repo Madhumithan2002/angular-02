@@ -1,16 +1,18 @@
+<div class="log">
+<div>
 <h1>LOG IN</h1>
 <div>
     <form [formGroup]="loginfrm" (ngSubmit)="lgin()">
         <div>
-            <label for="fullName">USER NAME:</label>
+            <label for="fullName" class="cls">USER NAME:</label>
             <input type="text" name="fullname" id="fullName" formControlName="username">
         </div>
          <div>
-            <label for="password">PASSWORD:</label>
+            <label for="password" class="cls">PASSWORD:</label>
             <input type="password" name="pwd" id="password" formControlName="password">
          </div>
 
-         <div>
+         <div class="btn">
             <button type="submit" [disabled]="!loginfrm.valid">Login</button>
          </div>
          <p *ngIf="userinvalid">
@@ -18,3 +20,5 @@
          </p>
     </form>
 </div>
+</div>
+

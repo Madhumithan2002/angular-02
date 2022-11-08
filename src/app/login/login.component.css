@@ -1,0 +1,13 @@
+.log{
+    border: 1px solid red;
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    background-color:skyblue;
+}
+.btn{
+    margin: 4%;
+}
+.cls{
+    color: white;
+}
