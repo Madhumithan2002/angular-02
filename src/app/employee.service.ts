@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import {stundent} from '../app/model/studentmdl';
+import { stundent } from '../app/model/studentmdl';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService {
+export default class EmployeeService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  public userId="102";
-  userNmae="madhumithan";
+  ApiUrl: string = "https://credo-shoppingcartv5.herokuapp.com";
 
-   stundetlist: stundent[] = [
+  public userId = "102";
+  userNmae = "madhumithan";
+
+  stundetlist: stundent[] = [
     {
       Rollno: 201,
       Name: 'arunk',
@@ -56,7 +60,12 @@ export class EmployeeService {
   ]
 
 
-  getAllstundent():stundent[]{
-   return this.stundetlist;
+  getAllstundent(): stundent[] {
+    return this.stundetlist;
+  }
+
+  getAllPorductlist(): Observable<any> {
+
+    return this.http.get(this.ApiUrl + "/listproducts");
   }
 }

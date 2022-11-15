@@ -14,7 +14,6 @@ export class HomeRComponent implements OnInit {
 
   ngOnInit(): void {
     let username = localStorage.getItem('username');
-    console.log(username);
     if(username == null || username == ''){
       this.log.navigateByUrl('/Login')
     }

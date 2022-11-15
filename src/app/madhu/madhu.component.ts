@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EmployeeService } from '../employee.service';
+import EmployeeService from '../employee.service';
 import { stundent } from '../model/studentmdl';
 import { stundentcls } from '../model/stundent';
 
@@ -86,7 +86,6 @@ export class MadhuComponent implements OnInit {
 
     let username = localStorage.getItem('username');
 
-    console.log(username);
     if(username == null || username == ''){
       this.log.navigateByUrl('/Login')
     }
@@ -104,6 +103,8 @@ export class MadhuComponent implements OnInit {
       this.userType = 'stundent';
     }
   }
+
+ 
 }
 
 

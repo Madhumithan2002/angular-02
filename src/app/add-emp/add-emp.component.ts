@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {EmployeeService} from '../employee.service';
+import EmployeeService from '../employee.service';
 
 @Component({
   selector: 'app-add-emp',
@@ -9,16 +9,16 @@ import {EmployeeService} from '../employee.service';
 })
 export class AddEmpComponent implements OnInit {
 
-  constructor(private empsr:EmployeeService,private log:Router) { }
+  constructor(private log:Router) { }
 
   ngOnInit(): void {
-    console.log(this.empsr.userId);
-    console.log(this.empsr.userNmae);
-    console.log(this.empsr.stundetlist);
+    //console.log(this.empsr.userId);
+    //console.log(this.empsr.userNmae);
+    //console.log(this.empsr.stundetlist);
 
     let username = localStorage.getItem('username');
 
-    console.log(username);
+
     if(username == null || username == ''){
       this.log.navigateByUrl('/Login')
     }

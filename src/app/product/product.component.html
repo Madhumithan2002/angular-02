@@ -1,0 +1,12 @@
+<button (click)="getallproductlistt()">Get products</button>
+
+<table>
+    <tr *ngFor="let p of productlist">
+        <td>{{p._id}}</td>
+        <td>{{p.pdtCatId}}</td>
+        <td>{{p.pdtName}}</td>
+        <td>{{p.pdtPrice}}</td>
+        <td>{{p.pdtDesc}}</td>
+        <td>{{p.pdtImgpath}}</td>
+    </tr>
+</table>

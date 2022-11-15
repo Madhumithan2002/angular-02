@@ -7,35 +7,46 @@ import { HomeRComponent } from './home-r/home-r.component';
 import { LoginComponent } from './login/login.component';
 import { MadhuComponent } from './madhu/madhu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
 import { UserAuthGuard } from './user-auth.guard';
 
 
 const routes: Routes = [
-{path:'services',
-  component:HomeRComponent,
-  canActivate:[UserAuthGuard]
-},
-{path:'about/:sid',
-  component:FirstcomponentComponent
-},
-{path:'tabel',
-  component:MadhuComponent
-},
- {path:'add-employee',
-   component:AddEmpComponent
-},
-{path:'addemployeereactive',
-   component:AddEmpReactiveComponent
-},
-{path:'Login',
-   component:LoginComponent
-},
-{path:'',redirectTo:"/services", pathMatch:'full'},
-{
-  path:'**',
-  component:PagenotfoundComponent
-}
- ]
+  {
+    path: 'services',
+    component: HomeRComponent,
+    canActivate: [UserAuthGuard]
+  },
+  {
+    path: 'about/:sid',
+    component: FirstcomponentComponent
+  },
+  {
+    path: 'tabel',
+    component: MadhuComponent
+  },
+  {
+    path: 'add-employee',
+    component: AddEmpComponent
+  },
+  {
+    path: 'addemployeereactive',
+    component: AddEmpReactiveComponent
+  },
+  {
+    path: 'Login',
+    component: LoginComponent
+  },
+  {
+    path: 'Getproduct',
+    component: ProductComponent
+  },
+  { path: '', redirectTo: "/services", pathMatch: 'full' },
+  {
+    path: '**',
+    component: PagenotfoundComponent
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

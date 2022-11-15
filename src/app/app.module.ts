@@ -15,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
 import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
-import { EmployeeService } from './employee.service';
+import EmployeeService from './employee.service';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { EmployeeService } from './employee.service';
     EmpdataComponent,
     AddEmpComponent,
     AddEmpReactiveComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent
 
 
   ],

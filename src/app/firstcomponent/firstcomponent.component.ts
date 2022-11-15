@@ -39,7 +39,6 @@ marks =0.9876;
   ngOnInit(): void {
     let username = localStorage.getItem('username');
 
-    console.log(username);
     if(username == null || username == ''){
       this.log.navigateByUrl('/Login')
     }

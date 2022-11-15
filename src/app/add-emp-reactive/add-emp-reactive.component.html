@@ -27,7 +27,7 @@
     <div>
         <label for="cntry">Country:</label>
         <select name="cntry" id="cntrySel" formControlName="country" (change)="countryVal()">
-            <option *ngFor="let c of  countrylist" [value]="c.cntryCode">{{c.cntryVale}}</option>
+            <option *ngFor="let c  of countrylist" [value]="c.cntryCode">{{c.cntryVale}}</option>
         </select>
     </div>
     <div>
