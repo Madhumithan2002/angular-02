@@ -1,0 +1,8 @@
+.emp{
+    border: 1px solid white;
+    margin: auto;
+    width: 25%;
+    padding-left: 2%;
+    background-color: darkslategrey;
+    border-radius: 3%;
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import EmployeeService from '../employee.service';
 import { stundent } from '../model/studentmdl';
 import { stundentcls } from '../model/stundent';
 
@@ -63,7 +62,7 @@ export class MadhuComponent implements OnInit {
       Age: 10,
       cnt: 826286846328,
     },
-    
+
   ]
 
   public subject: String[] = ['arun', 'ram', 'yokesh', 'aravind']
@@ -77,7 +76,7 @@ export class MadhuComponent implements OnInit {
 
   }
 
-  constructor(private log:Router) { }
+  constructor(private log: Router) { }
   // stundetlist:stundent[];
 
   ngOnInit(): void {
@@ -86,7 +85,7 @@ export class MadhuComponent implements OnInit {
 
     let username = localStorage.getItem('username');
 
-    if(username == null || username == ''){
+    if (username == null || username == '') {
       this.log.navigateByUrl('/Login')
     }
   }
@@ -104,7 +103,7 @@ export class MadhuComponent implements OnInit {
     }
   }
 
- 
+
 }
 
 

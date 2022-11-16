@@ -1,1 +1,12 @@
-<p>empdata works!</p>
+<button (click)=" allproduct()">submit</button>
+<table>
+    <tr *ngFor="let p of product">
+        <td>{{p._id}}</td>
+        <td>{{p.pdtCatId}}</td>
+        <td>{{p. pdtName}}</td>
+        <td>{{p.pdtPrice}}</td>
+        <td>{{p.pdtDesc}}</td>
+        <td>{{p.pdtImgPath}}</td>
+    </tr>
+
+</table>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import EmployeeService from '../employee.service';
+import { productlist } from '../model/productlist';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-empdata',
@@ -8,11 +9,18 @@ import EmployeeService from '../employee.service';
 })
 export class EmpdataComponent implements OnInit {
 
-  constructor(private empsr:EmployeeService) { }
+  constructor(private getproduct:ProductService) { }
+
+  public product:productlist[]=[]
 
   ngOnInit(): void {
-    console.log(this.empsr.userId);
-    console.log(this.empsr.userNmae);
   }
 
+  
+
+  allproduct(){
+    this.getproduct.HttpRequest().subscribe(res => console.log(res));
+  }
+  
 }
+

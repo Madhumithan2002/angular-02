@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { gtr10 } from '../shared/customvalidation/employeevalidation'
 import { countryy } from '../model/countrylist';
- import { Router } from '@angular/router';
-import EmployeeService from '../employee.service';
-'../model/country'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-emp-reactive',

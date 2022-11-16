@@ -15,8 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEmpReactiveComponent } from './add-emp-reactive/add-emp-reactive.component';
 import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
-import EmployeeService from './employee.service';
-import { ProductComponent } from './product/product.component';
+import { ProductService } from './product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,11 +29,11 @@ import { ProductComponent } from './product/product.component';
     RoterComponent,
     PagenotfoundComponent,
     HeaderComponent,
-    EmpdataComponent,
     AddEmpComponent,
     AddEmpReactiveComponent,
     LoginComponent,
-    ProductComponent
+    EmpdataComponent
+
 
 
   ],
@@ -42,10 +42,11 @@ import { ProductComponent } from './product/product.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    HttpClientModule
+
 
   ],
-  providers: [UserAuthGuard,EmployeeService],
+  providers: [UserAuthGuard, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
