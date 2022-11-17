@@ -1,4 +1,4 @@
-<div class="head">
+<!-- <div class="head">
   <ul class="link">
     <li> <a routerLink="/Home" routerLinkActive="compActive">Home</a></li>
     <li> <a [routerLink]="['/about','54']" routerLinkActive="compActive">about</a></li>
@@ -10,6 +10,12 @@
     <li> <a routerLink="/contact" routerLinkActive="compActive">contact</a></li>
     <li><a href="#" (click)="logout()">Sing out</a></li>
   </ul>
+</div> -->
+<div class="head">
+<ul class="link">
+  <li *ngFor="let navlit of navlist">
+       <a [routerLink]="navlit.pathVal" routerLinkActive="compActive">{{navlit.nanam}}</a>
+  </li>
+  <li><a href="#" (click)="logout()">Sing out</a></li>
+</ul>
 </div>
-
-<router-outlet></router-outlet>

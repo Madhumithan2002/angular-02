@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { UserAuthGuard } from './user-auth.guard';
 import { ProductService } from './product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DatatableComponent } from './datatable/datatable.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddEmpComponent,
     AddEmpReactiveComponent,
     LoginComponent,
-    EmpdataComponent
+    EmpdataComponent,
+    DatatableComponent
 
 
 
