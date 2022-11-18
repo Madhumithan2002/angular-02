@@ -9,18 +9,22 @@ import { ProductService } from '../product.service';
 })
 export class EmpdataComponent implements OnInit {
 
-  constructor(private getproduct:ProductService) { }
-
-  public product:productlist[]=[]
+  constructor(private getproduct: ProductService) { }
+  produ:boolean=false;
+  product: any;
 
   ngOnInit(): void {
   }
 
-  
 
-  allproduct(){
-    this.getproduct.HttpRequest().subscribe(res => console.log(res));
+
+  allproduct() {
+    this.getproduct.HttpRequest().subscribe(res => {
+      console.log(res)
+      this.product = res;
+      this.produ = true;
+    });
   }
-  
+
 }
 

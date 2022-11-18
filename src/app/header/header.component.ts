@@ -7,8 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(private singout:Router) { }
 
  @Input() navlist:any[]=[
     {
@@ -51,7 +52,7 @@ export class HeaderComponent implements OnInit {
   logout(){
     localStorage.clear();
     sessionStorage.clear();
-    // this.singout.navigateByUrl('/Login');
+     this.singout.navigateByUrl('/Login');
   }
 
 }

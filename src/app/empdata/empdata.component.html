@@ -1,6 +1,14 @@
 <button (click)=" allproduct()">submit</button>
 <table>
-    <tr *ngFor="let p of product">
+    <tr *ngIf="produ == true">
+        <th>product id</th>
+        <th>product catid</th>
+        <th>product Name</th>
+        <th>product price</th>
+        <th>product disaccount</th>
+        <th>product img</th>
+    </tr>
+        <tr *ngFor="let p of product">
         <td>{{p._id}}</td>
         <td>{{p.pdtCatId}}</td>
         <td>{{p. pdtName}}</td>
