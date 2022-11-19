@@ -30,7 +30,7 @@ export class AppComponent {
       pathVal:'/addemployeereactive',
     },
     {
-      nanam:'productlist',
+      nanam:'productslist',
       pathVal:'/productlist',
     },
     {

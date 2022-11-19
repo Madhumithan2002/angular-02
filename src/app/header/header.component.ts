@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
       pathVal:'/addemployeereactive',
     },
     {
-      nanam:'productlist',
+      nanam:'prductslist',
       pathVal:'/productlist',
     },
     {

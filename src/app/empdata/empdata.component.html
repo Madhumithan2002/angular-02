@@ -1,14 +1,14 @@
-<button (click)=" allproduct()">submit</button>
+<button (click)=" allproducts()">submit</button>
 <table>
     <tr *ngIf="produ == true">
-        <th>product id</th>
-        <th>product catid</th>
-        <th>product Name</th>
-        <th>product price</th>
-        <th>product disaccount</th>
-        <th>product img</th>
+        <th>products id</th>
+        <th>products catid</th>
+        <th>products Name</th>
+        <th>products price</th>
+        <th>products disaccount</th>
+        <th>products img</th>
     </tr>
-        <tr *ngFor="let p of product">
+        <tr *ngFor="let p of products">
         <td>{{p._id}}</td>
         <td>{{p.pdtCatId}}</td>
         <td>{{p. pdtName}}</td>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { productlist } from '../model/productlist';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -8,20 +7,24 @@ import { ProductService } from '../product.service';
   styleUrls: ['./empdata.component.css']
 })
 export class EmpdataComponent implements OnInit {
+allproducts() {
+throw new Error('Method not implemented.');
+}
+products: any;
 
-  constructor(private getproduct: ProductService) { }
+  constructor(private getproducts: ProductService) { }
   produ:boolean=false;
-  product: any;
+  prducts: any;
 
   ngOnInit(): void {
   }
 
 
 
-  allproduct() {
-    this.getproduct.HttpRequest().subscribe(res => {
+  allprducts() {
+    this.getproducts.HttpRequest().subscribe(res => {
       console.log(res)
-      this.product = res;
+      this.prducts = res;
       this.produ = true;
     });
   }
