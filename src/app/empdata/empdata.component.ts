@@ -7,24 +7,22 @@ import { ProductService } from '../product.service';
   styleUrls: ['./empdata.component.css']
 })
 export class EmpdataComponent implements OnInit {
-allproducts() {
-throw new Error('Method not implemented.');
-}
+
 products: any;
 
   constructor(private getproducts: ProductService) { }
   produ:boolean=false;
-  prducts: any;
+  
 
   ngOnInit(): void {
   }
 
 
 
-  allprducts() {
+  allproducts() {
     this.getproducts.HttpRequest().subscribe(res => {
       console.log(res)
-      this.prducts = res;
+      this.products = res;
       this.produ = true;
     });
   }
